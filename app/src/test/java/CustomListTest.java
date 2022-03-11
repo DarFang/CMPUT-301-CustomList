@@ -29,4 +29,12 @@ public class CustomListTest {
         list.addCity(city);
         assertEquals(true, list.hasCity(city));
     }
+    @Test
+    public void testDeleteException(){
+        City city = new City("YellowKnife", "NWT");
+        list.addCity(city);
+        assertEquals(true, list.hasCity(city));
+        list.deleteCity(city);
+        assertEquals(false, list.hasCity(city));
+    }
 }
